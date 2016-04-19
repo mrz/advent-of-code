@@ -34,16 +34,12 @@
 
 (defn day-4-1 []
   (loop [n 1]
-    (when (= (mod n 10000) 0)
-      (println n))
     (if (validate-string (digest/md5 (str input n)))
       n
       (recur (inc n)))))
 
 (defn day-4-2 []
   (loop [n 1]
-    (when (= (mod n 10000) 0)
-      (println n))
     (if (validate-string-2 (digest/md5 (str input n)))
       n
       (recur (inc n)))))
